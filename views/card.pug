@@ -1,0 +1,13 @@
+div.col-xl-4.mb-4.col-md-6
+    div.card.box-shadow.card-height.p-1
+        a(href='goods?id='+val['id'], class='d-flex flex-column')
+            img(src='images/'+val['image'], alt=val['name'], class="card-img-top p-4")
+            div.card-body.flex-grow-1.d-flex.flex-column
+                h3(class='card-title') #{val['name']}
+                p(class='h4') Цена: #{val['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')}грн
+        button(
+            class="btn btn-primary margin add-to-cart",
+            data-goods_id=val['id']
+        ) TO CART
+
+

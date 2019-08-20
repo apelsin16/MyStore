@@ -1,0 +1,17 @@
+include header
+
+div.container
+    div.row
+        each value, index in cat
+            div.col.col-xl-12
+                h2.h2
+                    a(href='/cat?id='+(+index+1)) #{value['category']}
+            if (index == 0)
+                each val, index in laptop
+                    include card
+            else
+                each val, index in phone
+                    include card
+
+include nav
+include footer

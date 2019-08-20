@@ -1,0 +1,17 @@
+include header
+
+div.container.mb-4
+    div.row
+        div.col.col-md-12
+            h2 #{goods[0]['name']}
+        div.col.col-md-4
+            img(class='goods-img', src='images/'+goods[0]['image'] )
+        div.col.col-md-8
+            p #{goods[0]['description']}
+            span(class="success") Цена: #{goods[0]['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')}грн
+            button(
+            class='btn btn-success ml-4 add-to-cart'
+            data-goods_id=goods[0]['id']) TO CART
+include nav
+include footer
+
